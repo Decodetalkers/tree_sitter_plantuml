@@ -1,0 +1,23 @@
+===========
+very simple
+===========
+
+@startuml
+
+abstract class AbstractList
+abstract AbstractCollection
+interface List
+interface Collection
+@enduml
+
+---
+
+(plantuml
+  (typedef
+    (identifier))
+  (typedef
+    (identifier))
+  (typedef
+    (identifier))
+  (typedef
+    (identifier)))
