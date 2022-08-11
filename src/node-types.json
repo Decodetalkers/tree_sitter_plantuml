@@ -1,6 +1,6 @@
 [
   {
-    "type": "plantuml",
+    "type": "baseuml",
     "named": true,
     "fields": {},
     "children": {
@@ -9,6 +9,43 @@
       "types": [
         {
           "type": "typedef",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "jsonuml",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "mindmap",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "plantuml",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "baseuml",
+          "named": true
+        },
+        {
+          "type": "jsonuml",
+          "named": true
+        },
+        {
+          "type": "mindmap",
+          "named": true
+        },
+        {
+          "type": "yamluml",
           "named": true
         }
       ]
@@ -30,11 +67,40 @@
     }
   },
   {
+    "type": "yamluml",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "@endjson",
+    "named": false
+  },
+  {
+    "type": "@endmindmap",
+    "named": false
+  },
+  {
     "type": "@enduml",
     "named": false
   },
   {
+    "type": "@endyaml",
+    "named": false
+  },
+  {
+    "type": "@startjson",
+    "named": false
+  },
+  {
+    "type": "@startmindmap",
+    "named": false
+  },
+  {
     "type": "@startuml",
+    "named": false
+  },
+  {
+    "type": "@startyaml",
     "named": false
   },
   {

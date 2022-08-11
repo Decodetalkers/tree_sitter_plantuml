@@ -4,10 +4,11 @@ module.exports = grammar({
   name: "plantuml",
   rules: {
     plantuml: ($) =>
-      seq(
-        "@startuml",
-				repeat($.typedef),
-        "@enduml",
+      choice(
+        $.baseuml,
+        $.mindmap,
+        $.yamluml,
+        $.jsonuml,
       ),
     ...class_,
     ...base,

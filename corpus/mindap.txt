@@ -1,0 +1,11 @@
+========
+simple
+========
+
+@startmindmap
+@endmindmap
+
+---
+
+(plantuml
+  (mindmap))

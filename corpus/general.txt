@@ -13,11 +13,12 @@ interface Collection
 ---
 
 (plantuml
-  (typedef
-    (identifier))
-  (typedef
-    (identifier))
-  (typedef
-    (identifier))
-  (typedef
-    (identifier)))
+  (baseuml
+    (typedef
+      (identifier))
+    (typedef
+      (identifier))
+    (typedef
+      (identifier))
+    (typedef
+      (identifier))))

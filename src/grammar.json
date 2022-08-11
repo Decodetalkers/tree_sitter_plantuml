@@ -2,31 +2,25 @@
   "name": "plantuml",
   "rules": {
     "plantuml": {
-      "type": "SEQ",
+      "type": "CHOICE",
       "members": [
         {
-          "type": "STRING",
-          "value": "@startuml"
+          "type": "SYMBOL",
+          "name": "baseuml"
         },
         {
-          "type": "REPEAT",
-          "content": {
-            "type": "SYMBOL",
-            "name": "typedef"
-          }
+          "type": "SYMBOL",
+          "name": "mindmap"
         },
         {
-          "type": "STRING",
-          "value": "@enduml"
+          "type": "SYMBOL",
+          "name": "yamluml"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "jsonuml"
         }
       ]
-    },
-    "_typedefs": {
-      "type": "REPEAT",
-      "content": {
-        "type": "SYMBOL",
-        "name": "typedef"
-      }
     },
     "typedef": {
       "type": "CHOICE",
@@ -76,6 +70,65 @@
         {
           "type": "SYMBOL",
           "name": "identifier"
+        }
+      ]
+    },
+    "baseuml": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "@startuml"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "typedef"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "@enduml"
+        }
+      ]
+    },
+    "mindmap": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "@startmindmap"
+        },
+        {
+          "type": "STRING",
+          "value": "@endmindmap"
+        }
+      ]
+    },
+    "yamluml": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "@startyaml"
+        },
+        {
+          "type": "STRING",
+          "value": "@endyaml"
+        }
+      ]
+    },
+    "jsonuml": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "@startjson"
+        },
+        {
+          "type": "STRING",
+          "value": "@endjson"
         }
       ]
     },
