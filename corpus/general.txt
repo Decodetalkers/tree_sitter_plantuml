@@ -29,12 +29,12 @@ swinguml
 
 @startuml
 
-== firststate ==
+== first  state ==
 
 user -> client
 client -> back : startsign
 
-== secondstate ==
+== second state Połącz 測試  ==
 
 user -> backend : backend 
 
@@ -46,7 +46,7 @@ user -> backend : backend
 (plantuml
   (baseuml
     (statedec
-      (identifier))
+      (statedescribe))
     (astate
       (identifier)
       (identifier))
@@ -56,7 +56,7 @@ user -> backend : backend
       (statemessage
         (identifier)))
     (statedec
-      (identifier))
+      (statedescribe))
     (astate
       (identifier)
       (identifier)

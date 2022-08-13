@@ -177,7 +177,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "identifier"
+          "name": "statedescribe"
         },
         {
           "type": "STRING",
@@ -226,6 +226,10 @@
           "name": "identifier"
         }
       ]
+    },
+    "statedescribe": {
+      "type": "PATTERN",
+      "value": "[a-zA-Z\\s\\p{L}\\u4E00-\\u9FFF]+"
     },
     "mindmapunit": {
       "type": "SEQ",

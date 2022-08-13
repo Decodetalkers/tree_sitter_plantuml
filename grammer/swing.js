@@ -5,7 +5,7 @@ module.exports = {
   statedec: ($) =>
     seq(
       "==",
-      $.identifier,
+      $.statedescribe,
       "==",
     ),
   astate: ($) =>
@@ -20,4 +20,6 @@ module.exports = {
       ":",
       $.identifier,
     ),
+	// now support charactrites and space
+	statedescribe: ($) =>  /[a-zA-Z\s\p{L}\u4E00-\u9FFF]+/,
 };

@@ -112,7 +112,7 @@
       "required": true,
       "types": [
         {
-          "type": "identifier",
+          "type": "statedescribe",
           "named": true
         }
       ]
@@ -212,5 +212,9 @@
   {
     "type": "interface",
     "named": false
+  },
+  {
+    "type": "statedescribe",
+    "named": true
   }
 ]
