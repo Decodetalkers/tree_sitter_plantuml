@@ -16,6 +16,7 @@ module.exports = {
   mindmap: ($) =>
     seq(
       "@startmindmap",
+      repeat($.mindmapunit),
       "@endmindmap",
     ),
   yamluml: ($) =>

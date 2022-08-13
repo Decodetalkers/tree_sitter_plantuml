@@ -122,6 +122,13 @@
           "value": "@startmindmap"
         },
         {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "mindmapunit"
+          }
+        },
+        {
           "type": "STRING",
           "value": "@endmindmap"
         }
@@ -219,6 +226,23 @@
           "name": "identifier"
         }
       ]
+    },
+    "mindmapunit": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_minmapstart"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        }
+      ]
+    },
+    "_minmapstart": {
+      "type": "PATTERN",
+      "value": "\\*+"
     }
   },
   "extras": [

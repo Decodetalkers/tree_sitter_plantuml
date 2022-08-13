@@ -49,7 +49,32 @@
   {
     "type": "mindmap",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "mindmapunit",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "mindmapunit",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "plantuml",
