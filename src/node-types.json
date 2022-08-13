@@ -1,5 +1,24 @@
 [
   {
+    "type": "astate",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "statemessage",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "baseuml",
     "named": true,
     "fields": {},
@@ -7,6 +26,14 @@
       "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "astate",
+          "named": true
+        },
+        {
+          "type": "statedec",
+          "named": true
+        },
         {
           "type": "typedef",
           "named": true
@@ -52,6 +79,36 @@
     }
   },
   {
+    "type": "statedec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "statemessage",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "typedef",
     "named": true,
     "fields": {},
@@ -70,6 +127,18 @@
     "type": "yamluml",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "->",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": "==",
+    "named": false
   },
   {
     "type": "@endjson",

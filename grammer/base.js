@@ -2,7 +2,15 @@ module.exports = {
   baseuml: ($) =>
     seq(
       "@startuml",
-      repeat($.typedef),
+      choice(
+        repeat($.typedef),
+        repeat(
+          choice(
+            $.statedec,
+            $.astate,
+          ),
+        ),
+      ),
       "@enduml",
     ),
   mindmap: ($) =>

@@ -1,5 +1,6 @@
-const base = require("./grammer/base.js");
-const class_ = require("./grammer/class.js");
+const swing = require("./grammer/swing");
+const base = require("./grammer/base");
+const class_ = require("./grammer/class");
 module.exports = grammar({
   name: "plantuml",
   rules: {
@@ -12,5 +13,6 @@ module.exports = grammar({
       ),
     ...class_,
     ...base,
+		...swing,
   },
 });

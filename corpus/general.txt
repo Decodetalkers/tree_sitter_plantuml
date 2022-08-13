@@ -22,3 +22,43 @@ interface Collection
       (identifier))
     (typedef
       (identifier))))
+
+====
+swinguml
+====
+
+@startuml
+
+== firststate ==
+
+user -> client
+client -> back : startsign
+
+== secondstate ==
+
+user -> backend : backend 
+
+
+@enduml
+
+---
+
+(plantuml
+  (baseuml
+    (statedec
+      (identifier))
+    (astate
+      (identifier)
+      (identifier))
+    (astate
+      (identifier)
+      (identifier)
+      (statemessage
+        (identifier)))
+    (statedec
+      (identifier))
+    (astate
+      (identifier)
+      (identifier)
+      (statemessage
+        (identifier)))))
