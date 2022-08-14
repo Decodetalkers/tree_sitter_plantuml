@@ -1,9 +1,11 @@
+const basetypes = require("./grammer/basetypes");
+const baseuml = require("./grammer/baseuml");
 const mindmap = require("./grammer/minidap");
-const swing = require("./grammer/swing");
-const base = require("./grammer/base");
-const class_ = require("./grammer/class");
+const jsonuml = require("./grammer/jsonuml");
+const yamluml = require("./grammer/yamluml");
 module.exports = grammar({
   name: "plantuml",
+
   rules: {
     plantuml: ($) =>
       choice(
@@ -12,9 +14,10 @@ module.exports = grammar({
         $.yamluml,
         $.jsonuml,
       ),
-    ...class_,
-    ...base,
-    ...swing,
+    ...baseuml,
+    ...basetypes,
     ...mindmap,
+    ...jsonuml,
+    ...yamluml,
   },
 });
