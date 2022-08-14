@@ -29,6 +29,7 @@ swinguml
 
 @startuml
 
+actor  Actor  as Foo1
 == first  state ==
 
 user -> client
@@ -45,8 +46,12 @@ user -> backend : backend
 
 (plantuml
   (baseuml
+	  (pardec
+      (identifier)
+      (identifier)
+      (identifier))
     (statedec
-      (statedescribe))
+      (describe))
     (astate
       (identifier)
       (identifier))
@@ -54,11 +59,41 @@ user -> backend : backend
       (identifier)
       (identifier)
       (statemessage
-        (identifier)))
+        (describe)))
     (statedec
-      (statedescribe))
+      (describe))
     (astate
       (identifier)
       (identifier)
       (statemessage
-        (identifier)))))
+        (describe)))))
+
+====
+participant
+====
+@startuml
+participant Participant [
+    =Title
+    ----
+    SubTitle
+]
+
+participant Bob
+
+Participant -> Bob
+@enduml
+
+---
+(plantuml
+  (baseuml
+    (participantdec
+      (identifier)
+      (identifier)
+      (identifier)
+      (identifier))
+    (variable
+      (identifier)
+      (identifier))
+    (astate
+      (identifier)
+      (identifier))))

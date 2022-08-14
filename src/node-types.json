@@ -70,11 +70,23 @@
           "named": true
         },
         {
+          "type": "pardec",
+          "named": true
+        },
+        {
+          "type": "participantdec",
+          "named": true
+        },
+        {
           "type": "statedec",
           "named": true
         },
         {
           "type": "typedef",
+          "named": true
+        },
+        {
+          "type": "variable",
           "named": true
         }
       ]
@@ -234,6 +246,36 @@
     }
   },
   {
+    "type": "pardec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "participantdec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "plantuml",
     "named": true,
     "fields": {},
@@ -269,7 +311,7 @@
       "required": true,
       "types": [
         {
-          "type": "statedescribe",
+          "type": "describe",
           "named": true
         }
       ]
@@ -284,7 +326,7 @@
       "required": true,
       "types": [
         {
-          "type": "identifier",
+          "type": "describe",
           "named": true
         }
       ]
@@ -336,6 +378,21 @@
     }
   },
   {
+    "type": "variable",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "yamluml",
     "named": true,
     "fields": {}
@@ -354,6 +411,10 @@
   },
   {
     "type": ":",
+    "named": false
+  },
+  {
+    "type": "=",
     "named": false
   },
   {
@@ -405,8 +466,16 @@
     "named": false
   },
   {
+    "type": "as",
+    "named": false
+  },
+  {
     "type": "class",
     "named": false
+  },
+  {
+    "type": "describe",
+    "named": true
   },
   {
     "type": "escape_sequence",
@@ -430,10 +499,6 @@
   },
   {
     "type": "number",
-    "named": true
-  },
-  {
-    "type": "statedescribe",
     "named": true
   },
   {

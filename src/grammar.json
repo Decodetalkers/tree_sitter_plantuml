@@ -42,17 +42,8 @@
             {
               "type": "REPEAT",
               "content": {
-                "type": "CHOICE",
-                "members": [
-                  {
-                    "type": "SYMBOL",
-                    "name": "statedec"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "astate"
-                  }
-                ]
+                "type": "SYMBOL",
+                "name": "_sequenceunit"
               }
             }
           ]
@@ -60,6 +51,31 @@
         {
           "type": "STRING",
           "value": "@enduml"
+        }
+      ]
+    },
+    "_sequenceunit": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "pardec"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "statedec"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "astate"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "variable"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "participantdec"
         }
       ]
     },
@@ -72,11 +88,32 @@
         },
         {
           "type": "SYMBOL",
-          "name": "statedescribe"
+          "name": "describe"
         },
         {
           "type": "STRING",
           "value": "=="
+        }
+      ]
+    },
+    "pardec": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "STRING",
+          "value": "as"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
         }
       ]
     },
@@ -109,6 +146,56 @@
         }
       ]
     },
+    "variable": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        }
+      ]
+    },
+    "participantdec": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "STRING",
+          "value": "["
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_splitline"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "STRING",
+          "value": "]"
+        }
+      ]
+    },
     "statemessage": {
       "type": "SEQ",
       "members": [
@@ -118,13 +205,13 @@
         },
         {
           "type": "SYMBOL",
-          "name": "identifier"
+          "name": "describe"
         }
       ]
     },
-    "statedescribe": {
+    "_splitline": {
       "type": "PATTERN",
-      "value": "[a-zA-Z\\s\\p{L}\\u4E00-\\u9FFF]+"
+      "value": "\\-+"
     },
     "typedef": {
       "type": "CHOICE",
@@ -179,7 +266,7 @@
     },
     "identifier": {
       "type": "PATTERN",
-      "value": "[a-zA-Z]+"
+      "value": "[a-zA-Z\\d]+"
     },
     "number": {
       "type": "TOKEN",
@@ -578,6 +665,10 @@
           }
         ]
       }
+    },
+    "describe": {
+      "type": "PATTERN",
+      "value": "[a-zA-Z\\s\\p{L}\\u4E00-\\u9FFF]+"
     },
     "mindmap": {
       "type": "SEQ",

@@ -6,16 +6,10 @@ module.exports = {
       "@startuml",
       choice(
         repeat($.typedef),
-        repeat(
-          choice(
-            $.statedec,
-            $.astate,
-          ),
-        ),
+        repeat($._sequenceunit),
       ),
       "@enduml",
     ),
-
   ...swim,
   ...class_,
 };

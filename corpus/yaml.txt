@@ -1,0 +1,12 @@
+===========
+basic
+===========
+
+@startyaml 
+@endyaml 
+
+---
+(plantuml
+  (yamluml))
+
+
