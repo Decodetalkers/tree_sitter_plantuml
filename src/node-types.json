@@ -378,11 +378,67 @@
     }
   },
   {
-    "type": "variable",
+    "type": "unitend",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unitstart",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "variable",
+    "named": true,
+    "fields": {
+      "class": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "xmlsignalunit",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
       "required": true,
       "types": [
         {
@@ -410,7 +466,19 @@
     "named": false
   },
   {
+    "type": "/>",
+    "named": false
+  },
+  {
     "type": ":",
+    "named": false
+  },
+  {
+    "type": "<",
+    "named": false
+  },
+  {
+    "type": "</",
     "named": false
   },
   {
@@ -419,6 +487,10 @@
   },
   {
     "type": "==",
+    "named": false
+  },
+  {
+    "type": ">",
     "named": false
   },
   {
@@ -503,6 +575,10 @@
   },
   {
     "type": "true",
+    "named": true
+  },
+  {
+    "type": "xmldescribe",
     "named": true
   },
   {

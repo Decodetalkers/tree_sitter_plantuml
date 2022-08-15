@@ -31,7 +31,12 @@ module.exports = {
       $.identifier,
       optional($.statemessage),
     ),
-  variable: ($) => seq($.identifier, $.identifier),
+	// mark it is class name
+  variable: ($) =>
+    seq(
+      field("class",$.identifier),
+      $.identifier,
+    ),
   participantdec: ($) =>
     seq(
       $.identifier,
