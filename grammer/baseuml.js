@@ -4,9 +4,11 @@ module.exports = {
   baseuml: ($) =>
     seq(
       "@startuml",
-      choice(
-        repeat($.typedef),
-        repeat($._sequenceunit),
+      optional(
+        choice(
+          repeat($.typedef),
+          repeat($._sequenceunit),
+        ),
       ),
       "@enduml",
     ),
