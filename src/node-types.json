@@ -1,5 +1,50 @@
 [
   {
+    "type": "actorstate",
+    "named": true,
+    "fields": {
+      "alias": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "actorunit",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "actorunit",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "casedescribe",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "array",
     "named": true,
     "fields": {},
@@ -66,7 +111,15 @@
       "required": false,
       "types": [
         {
+          "type": "actorstate",
+          "named": true
+        },
+        {
           "type": "astate",
+          "named": true
+        },
+        {
+          "type": "casestate",
           "named": true
         },
         {
@@ -87,6 +140,48 @@
         },
         {
           "type": "variable",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "casestate",
+    "named": true,
+    "fields": {
+      "alias": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "casedescribe",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "unitusercase",
           "named": true
         }
       ]
@@ -408,6 +503,21 @@
     }
   },
   {
+    "type": "unitusercase",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "casedescribe",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "variable",
     "named": true,
     "fields": {
@@ -455,6 +565,14 @@
   },
   {
     "type": "\"",
+    "named": false
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
     "named": false
   },
   {
@@ -538,8 +656,16 @@
     "named": false
   },
   {
+    "type": "actor",
+    "named": false
+  },
+  {
     "type": "as",
     "named": false
+  },
+  {
+    "type": "casedescribe",
+    "named": true
   },
   {
     "type": "class",
@@ -576,6 +702,10 @@
   {
     "type": "true",
     "named": true
+  },
+  {
+    "type": "usecase",
+    "named": false
   },
   {
     "type": "xmldescribe",

@@ -1,5 +1,5 @@
 // FIXME this should not use identifier
-//
+// FIXME this also use actors and usecases
 // it need to match space, unicode, chinese and etc
 // TODO this need to add typedeclare
 module.exports = {

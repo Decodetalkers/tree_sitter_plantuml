@@ -29,7 +29,7 @@ swinguml
 
 @startuml
 
-actor  Actor  as Foo1
+bctor  Actor  as Foo1
 == first  state ==
 
 user -> client

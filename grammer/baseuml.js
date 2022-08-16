@@ -1,5 +1,6 @@
-const swim = require("./baseuml/swim");
+const sequence = require("./baseuml/sequence");
 const class_ = require("./baseuml/class");
+const usecases = require("./baseuml/usecases");
 module.exports = {
   baseuml: ($) =>
     seq(
@@ -8,10 +9,12 @@ module.exports = {
         choice(
           repeat($.typedef),
           repeat($._sequenceunit),
+          repeat($._allcase),
         ),
       ),
       "@enduml",
     ),
-  ...swim,
+  ...sequence,
   ...class_,
+  ...usecases,
 };
