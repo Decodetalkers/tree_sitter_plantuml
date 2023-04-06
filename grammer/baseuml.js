@@ -7,6 +7,7 @@ module.exports = {
     ),
   command: ($) => seq(repeat1($._command_unit), "\n"),
   _command_unit: $ => choice(
+    $.message,
     $.block,
     $.string,
     $.method,
@@ -19,6 +20,13 @@ module.exports = {
   method: ($) => seq(
     $.identifier,
     "()",
+  ),
+  message: ($) => seq(
+    "$",
+    $.identifier,
+    "(",
+    optional($.string),
+    ")",
   ),
   block: $ => seq(
     "{",
@@ -35,6 +43,8 @@ module.exports = {
     "+",
     "-",
     "#",
+    "!",
+    "/",
     "|",
   ),
   bracket: ($) => choice(

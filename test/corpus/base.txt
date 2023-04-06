@@ -221,3 +221,83 @@ Bob <- Alice : Yet another authentication Response
       (identifier)
       (identifier)
       (identifier))))
+
+=====
+message and theme
+====
+
+@startuml
+!theme spacelab
+!theme amiga from https://raw.githubusercontent.com/plantuml/plantuml/master/themes
+
+Bob -> Alice :  hello
+Bob <- Alice :  $success("success: hello B.")
+Bob -x Alice :  $failure("failure")
+Bob ->> Alice : $warning("warning")
+@enduml
+
+---
+
+(plantuml
+  (baseuml
+    (command
+      (uniqkey)
+      (identifier)
+      (identifier))
+    (command
+      (uniqkey)
+      (identifier)
+      (identifier)
+      (identifier)
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (message
+        (identifier)
+        (string)))
+    (command
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier)
+      (uniqkey)
+      (message
+        (identifier)
+        (string)))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (message
+        (identifier)
+        (string)))))
