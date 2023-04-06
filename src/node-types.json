@@ -30,11 +30,6 @@
     }
   },
   {
-    "type": "bracket",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "color",
     "named": true,
     "fields": {},
@@ -68,10 +63,6 @@
       "types": [
         {
           "type": "block",
-          "named": true
-        },
-        {
-          "type": "bracket",
           "named": true
         },
         {
