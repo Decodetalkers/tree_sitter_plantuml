@@ -51,7 +51,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "tree-sitter-qml"
+name = "tree-sitter-plantuml"
 version = "0.0.1"
 dependencies = [
  "cc",

@@ -4,12 +4,20 @@
   "description": "",
   "main": "bindings/node",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "prettier --check grammar.js",
+    "format": "prettier --write grammar.js",
+    "build": "tree-sitter generate",
+    "test": "tree-sitter test"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Decodetalkers",
+  "gypfile": false,
+  "license": "MIT",
   "dependencies": {
-    "tree-sitter-cli": "^0.20.6"
+    "nan": "^2.16.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.6",
+    "prettier": "^2.7.1"
   }
 }

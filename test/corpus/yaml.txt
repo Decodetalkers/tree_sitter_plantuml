@@ -2,11 +2,12 @@
 basic
 ===========
 
-@startyaml 
-@endyaml 
+@startyaml
+
+a : 2
+
+@endyaml
 
 ---
 (plantuml
   (yamluml))
-
-
