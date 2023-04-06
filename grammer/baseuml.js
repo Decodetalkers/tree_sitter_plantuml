@@ -34,7 +34,7 @@ module.exports = {
   ),
   _block_1: $ => seq(
     "{",
-    repeat($._command_unit),
+    repeat($.command),
     "}",
   ),
   _block_2: $ => seq(
