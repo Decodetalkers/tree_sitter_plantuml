@@ -31,6 +31,10 @@
           "named": true
         },
         {
+          "type": "command",
+          "named": true
+        },
+        {
           "type": "comment",
           "named": true
         },
