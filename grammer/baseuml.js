@@ -34,17 +34,17 @@ module.exports = {
   ),
   _block_1: $ => seq(
     "{",
-    repeat($.command),
+    repeat($._command_unit),
     "}",
   ),
   _block_2: $ => seq(
     "[",
-    repeat($.command),
+    repeat($._command_unit),
     "]",
   ),
   _block_3: $ => seq(
     "(",
-    repeat($.command),
+    repeat($._command_unit),
     ")",
   ),
   uniqkey: ($) => choice(
@@ -59,6 +59,7 @@ module.exports = {
     "#",
     "!",
     "/",
+    ",",
     "|",
   ),
   string: ($) =>
