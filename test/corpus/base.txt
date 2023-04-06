@@ -1,0 +1,223 @@
+======
+base
+=======
+
+@startuml
+actor Foo1
+boundary Foo2
+control Foo3
+entity Foo4
+database Foo5
+Foo1 -> Foo2 : To boundary
+Foo1 -> Foo3 : To control
+Foo1 -> Foo4 : To entity
+Foo1 -> Foo5 : To database
+@enduml
+---
+(plantuml
+  (baseuml
+    (command
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier))))
+
+========
+comment
+=======
+
+@startuml
+actor Bob #red
+' The only difference between actor
+'and participant is the drawing
+participant Alice
+participant "I have a really\nlong name" as L #99 FF99
+/' You can also declare:
+participant L as "I have a really\nlong name" #99 FF99
+'/
+Alice ->Bob: Authentication Request
+Bob ->Alice: Authentication Response
+Bob ->L: Log transaction
+@enduml
+
+---
+(plantuml
+   (baseuml
+     (command
+       (identifier)
+       (identifier)
+       (color
+         (colorleader)
+         (identifier)))
+     (command
+       (comment))
+     (command
+       (comment))
+     (command
+       (identifier)
+       (identifier))
+     (command
+       (identifier)
+       (string
+         (escape_sequence))
+       (identifier)
+       (identifier)
+       (color
+         (colorleader)
+         (identifier))
+       (identifier))
+     (command
+       (comment))
+     (command
+       (identifier)
+       (uniqkey)
+       (uniqkey)
+       (identifier)
+       (uniqkey)
+       (identifier)
+       (identifier))
+     (command
+       (identifier)
+       (uniqkey)
+       (uniqkey)
+       (identifier)
+       (uniqkey)
+       (identifier)
+       (identifier))
+     (command
+       (identifier)
+       (uniqkey)
+       (uniqkey)
+       (identifier)
+       (uniqkey)
+       (identifier)
+       (identifier))))
+
+====
+html
+====
+
+@startuml
+autonumber "<b >[000]"
+Bob -> Alice : Authentication Request
+Bob <- Alice : Authentication Response
+autonumber 15 "<b>(<u>##</u>)"
+Bob -> Alice : Another authentication Request
+Bob <- Alice : Another authentication Response
+autonumber 40 10 "<font color=red ><b>Message 0 "
+Bob -> Alice : Yet another authentication Request
+Bob <- Alice : Yet another authentication Response
+@enduml
+
+---
+
+(plantuml
+  (baseuml
+    (command
+      (identifier)
+      (string))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (identifier)
+      (string))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (identifier)
+      (identifier)
+      (string))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier)
+      (identifier)
+      (identifier))))

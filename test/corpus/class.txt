@@ -1,0 +1,84 @@
+======
+fucntion
+======
+
+@startuml
+Object <|-- ArrayList
+Object : equals ()
+ArrayList : Object [] elementData
+ArrayList : size()
+@enduml
+
+---
+
+(plantuml
+   (baseuml
+     (command
+       (identifier)
+       (uniqkey)
+       (uniqkey)
+       (uniqkey)
+       (uniqkey)
+       (identifier))
+     (command
+       (identifier)
+       (uniqkey)
+       (method
+         (identifier)))
+     (command
+       (identifier)
+       (uniqkey)
+       (identifier)
+       (bracket)
+       (bracket)
+       (identifier))
+     (command
+       (identifier)
+       (uniqkey)
+       (method
+         (identifier)))))
+
+=====
+block
+=====
+
+@startuml
+class Dummy {
+String data
+void methods ()
+}
+
+class Flight {
+flightNumber : Integer
+departureTime : Date
+}
+
+@enduml
+
+---
+
+(plantuml
+  (baseuml
+    (command
+      (identifier)
+      (identifier)
+      (block
+        (command
+          (identifier)
+          (identifier))
+        (command
+          (identifier)
+          (method
+            (identifier)))))
+    (command
+      (identifier)
+      (identifier)
+      (block
+        (command
+          (identifier)
+          (uniqkey)
+          (identifier))
+        (command
+          (identifier)
+          (uniqkey)
+          (identifier))))))
