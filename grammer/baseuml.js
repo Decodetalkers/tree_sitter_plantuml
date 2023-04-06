@@ -12,7 +12,6 @@ module.exports = {
     $.string,
     $.method,
     $.uniqkey,
-    $.bracket,
     $.color,
     $.identifier,
     $.comment,
@@ -28,10 +27,25 @@ module.exports = {
     optional($.string),
     ")",
   ),
-  block: $ => seq(
+  block: $ => choice(
+    $._block_1,
+    $._block_2,
+    $._block_3,
+  ),
+  _block_1: $ => seq(
     "{",
     repeat($.command),
     "}",
+  ),
+  _block_2: $ => seq(
+    "[",
+    repeat($.command),
+    "]",
+  ),
+  _block_3: $ => seq(
+    "(",
+    repeat($.command),
+    ")",
   ),
   uniqkey: ($) => choice(
     ".",
@@ -46,12 +60,6 @@ module.exports = {
     "!",
     "/",
     "|",
-  ),
-  bracket: ($) => choice(
-    "[",
-    "]",
-    ")",
-    "(",
   ),
   string: ($) =>
     seq(
