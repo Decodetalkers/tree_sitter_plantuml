@@ -201,7 +201,7 @@
           "type": "REPEAT",
           "content": {
             "type": "SYMBOL",
-            "name": "command"
+            "name": "_command_unit"
           }
         },
         {
@@ -221,7 +221,7 @@
           "type": "REPEAT",
           "content": {
             "type": "SYMBOL",
-            "name": "command"
+            "name": "_command_unit"
           }
         },
         {
@@ -241,7 +241,7 @@
           "type": "REPEAT",
           "content": {
             "type": "SYMBOL",
-            "name": "command"
+            "name": "_command_unit"
           }
         },
         {
@@ -296,6 +296,10 @@
         {
           "type": "STRING",
           "value": "/"
+        },
+        {
+          "type": "STRING",
+          "value": ","
         },
         {
           "type": "STRING",
