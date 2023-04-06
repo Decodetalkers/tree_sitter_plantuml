@@ -1,1 +1,1 @@
-# Treesitter Groovy Sdl Publish Page
+# Treesitter plantuml Sdl Publish Page
