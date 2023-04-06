@@ -87,6 +87,10 @@
           "named": true
         },
         {
+          "type": "message",
+          "named": true
+        },
+        {
           "type": "method",
           "named": true
         },
@@ -110,6 +114,25 @@
     "type": "jsonuml",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "message",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "method",
@@ -179,11 +202,19 @@
     "named": false
   },
   {
+    "type": "!",
+    "named": false
+  },
+  {
     "type": "\"",
     "named": false
   },
   {
     "type": "#",
+    "named": false
+  },
+  {
+    "type": "$",
     "named": false
   },
   {
@@ -216,6 +247,10 @@
   },
   {
     "type": ".",
+    "named": false
+  },
+  {
+    "type": "/",
     "named": false
   },
   {

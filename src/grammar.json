@@ -95,6 +95,10 @@
       "members": [
         {
           "type": "SYMBOL",
+          "name": "message"
+        },
+        {
+          "type": "SYMBOL",
           "name": "block"
         },
         {
@@ -137,6 +141,39 @@
         {
           "type": "STRING",
           "value": "()"
+        }
+      ]
+    },
+    "message": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "$"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "STRING",
+          "value": "("
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "string"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": ")"
         }
       ]
     },
@@ -198,6 +235,14 @@
         {
           "type": "STRING",
           "value": "#"
+        },
+        {
+          "type": "STRING",
+          "value": "!"
+        },
+        {
+          "type": "STRING",
+          "value": "/"
         },
         {
           "type": "STRING",
