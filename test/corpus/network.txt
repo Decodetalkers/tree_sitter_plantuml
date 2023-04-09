@@ -18,27 +18,29 @@ nwdiag {
 (plantuml
   (baseuml
     (command
-      (identifier)
       (block
-        (command
+        (block_1
           (identifier)
-          (identifier)
-          (block
-            (command
-              (identifier)
-              (uniqkey)
-              (string))
-            (command
-              (identifier)
-              (block
+          (command
+            (identifier)
+            (block
+              (block_1
                 (identifier)
-                (uniqkey)
-                (string))
-              (uniqkey))
-            (command
-              (identifier)
-              (block
-                (identifier)
-                (uniqkey)
-                (string))
-              (uniqkey))))))))
+                (command
+                  (identifier)
+                  (uniqkey)
+                  (string))
+                (command
+                  (identifier)
+                  (block
+                    (identifier)
+                    (uniqkey)
+                    (string))
+                  (uniqkey))
+                (command
+                  (identifier)
+                  (block
+                    (identifier)
+                    (uniqkey)
+                    (string))
+                  (uniqkey))))))))))

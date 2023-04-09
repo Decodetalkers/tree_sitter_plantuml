@@ -9,6 +9,7 @@ module.exports = grammar({
     // so they must be conflicts
     [$.colorleader, $.uniqkey],
     // NOTE: * is uniqkey, also string mark
+    [$.block_1, $._command_unit],
   ],
 
   rules: {
@@ -38,8 +39,8 @@ module.exports = grammar({
       ),
     method: ($) => seq($.identifier, "()"),
     message: ($) => seq("$", $.identifier, "(", optional($.string), ")"),
-    block: ($) => choice($._block_1, $._block_2, $._block_3, $.block_style),
-    _block_1: ($) => seq("{", repeat($.command), "}"),
+    block: ($) => choice($.block_1, $._block_2, $._block_3, $.block_style),
+    block_1: ($) => seq(optional($.identifier), "{", repeat($.command), "}"),
     _block_2: ($) => seq("[", repeat($._command_unit), "]"),
     _block_3: ($) => seq("(", repeat($._command_unit), ")"),
     block_style: ($) => seq("<style>", repeat($.command), "</style>"),

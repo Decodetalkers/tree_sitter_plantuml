@@ -60,27 +60,29 @@ departureTime : Date
   (baseuml
     (command
       (identifier)
-      (identifier)
       (block
-        (command
+        (block_1
           (identifier)
-          (identifier))
-        (command
-          (identifier)
-          (method
-            (identifier)))))
+          (command
+            (identifier)
+            (identifier))
+          (command
+            (identifier)
+            (method
+              (identifier))))))
     (command
       (identifier)
-      (identifier)
       (block
-        (command
+        (block_1
           (identifier)
-          (uniqkey)
-          (identifier))
-        (command
-          (identifier)
-          (uniqkey)
-          (identifier))))))
+          (command
+            (identifier)
+            (uniqkey)
+            (identifier))
+          (command
+            (identifier)
+            (uniqkey)
+            (identifier)))))))
 
 ====
 style block
@@ -107,26 +109,28 @@ saltDiagram {
       (block
         (block_style
           (command
-            (identifier)
             (block
-              (command
+              (block_1
                 (identifier)
-                (identifier)))))))
+                (command
+                  (identifier)
+                  (identifier))))))))
     (command
       (block
-        (command
-          (uniqkey))
-        (command
-          (identifier)
-          (uniqkey)
-          (string))
-        (command
-          (identifier)
-          (uniqkey)
-          (string))
-        (command
-          (block
-            (identifier))
-          (uniqkey)
-          (block
-            (identifier)))))))
+        (block_1
+          (command
+            (uniqkey))
+          (command
+            (identifier)
+            (uniqkey)
+            (string))
+          (command
+            (identifier)
+            (uniqkey)
+            (string))
+          (command
+            (block
+              (identifier))
+            (uniqkey)
+            (block
+              (identifier))))))))

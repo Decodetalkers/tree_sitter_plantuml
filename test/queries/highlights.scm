@@ -13,13 +13,33 @@
 
 (string) @string
 
-((identifier) @type.definition
-  (#any-of? @type.definition
-    "class"
+((identifier) @keyword
+  (#any-of? @keyword
 		"json"
 		"object"
 		"actor"
+		"class"
 	)
+)
+
+((identifier) @boolean
+  (#any-of? @boolean
+		"true"
+		"false"
+	)
+)
+
+[
+  "("
+  ")"
+  "{"
+  "}"
+  "["
+  "]"
+] @punctuation.bracket
+
+(block_1
+	(identifier) @type.definition
 )
 
 (comment) @comment
