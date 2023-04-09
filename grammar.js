@@ -8,6 +8,7 @@ module.exports = grammar({
     // also mark the color,
     // so they must be conflicts
     [$.colorleader, $.uniqkey],
+    // NOTE: * is uniqkey, also string mark
   ],
 
   rules: {
@@ -36,7 +37,23 @@ module.exports = grammar({
     _block_3: ($) => seq("(", repeat($._command_unit), ")"),
     block_style: ($) => seq("<style>", repeat($.command), "</style>"),
     uniqkey: ($) =>
-      choice(".", ">", "<", "_", ":", "*", "+", "-", "#", "!", "/", ",", "|"),
+      choice(
+        ".",
+        ">",
+        "<",
+        "_",
+        ":",
+        "*",
+        "+",
+        "-",
+        "#",
+        "!",
+        "/",
+        ",",
+        "|",
+        "=",
+        ";"
+      ),
     string: ($) =>
       seq(
         '"',

@@ -1,0 +1,44 @@
+====
+network
+====
+
+@startuml
+nwdiag {
+  network dmz {
+      address = "210.x.x.x/24"
+
+      web01 [address = "210.x.x.1"];
+      web02 [address = "210.x.x.2"];
+  }
+}
+@enduml
+
+---
+
+(plantuml
+  (baseuml
+    (command
+      (identifier)
+      (block
+        (command
+          (identifier)
+          (identifier)
+          (block
+            (command
+              (identifier)
+              (uniqkey)
+              (string))
+            (command
+              (identifier)
+              (block
+                (identifier)
+                (uniqkey)
+                (string))
+              (uniqkey))
+            (command
+              (identifier)
+              (block
+                (identifier)
+                (uniqkey)
+                (string))
+              (uniqkey))))))))
