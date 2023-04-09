@@ -387,18 +387,85 @@
       "members": [
         {
           "type": "STRING",
-          "value": "<style>"
+          "value": "<"
         },
         {
-          "type": "REPEAT",
+          "type": "FIELD",
+          "name": "head",
           "content": {
-            "type": "SYMBOL",
-            "name": "command"
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "identifier"
+              },
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SEQ",
+                    "members": [
+                      {
+                        "type": "STRING",
+                        "value": ":"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "identifier"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "BLANK"
+                  }
+                ]
+              },
+              {
+                "type": "STRING",
+                "value": ">"
+              }
+            ]
           }
         },
         {
-          "type": "STRING",
-          "value": "</style>"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "REPEAT",
+              "content": {
+                "type": "SYMBOL",
+                "name": "command"
+              }
+            },
+            {
+              "type": "REPEAT",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_command_unit"
+              }
+            }
+          ]
+        },
+        {
+          "type": "FIELD",
+          "name": "end",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "</"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "identifier"
+              },
+              {
+                "type": "STRING",
+                "value": ">"
+              }
+            ]
+          }
         }
       ]
     },
@@ -567,7 +634,7 @@
     },
     "identifier": {
       "type": "PATTERN",
-      "value": "[a-zA-Z0-9_]+"
+      "value": "[a-zA-Z0-9_.\\/]+"
     },
     "comment": {
       "type": "CHOICE",
@@ -633,6 +700,10 @@
     [
       "block_1",
       "_command_unit"
+    ],
+    [
+      "block_style",
+      "uniqkey"
     ]
   ],
   "precedences": [],
