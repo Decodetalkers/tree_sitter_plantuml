@@ -346,6 +346,10 @@
     "named": false
   },
   {
+    "type": ";",
+    "named": false
+  },
+  {
     "type": "<",
     "named": false
   },
@@ -355,6 +359,10 @@
   },
   {
     "type": "<style>",
+    "named": false
+  },
+  {
+    "type": "=",
     "named": false
   },
   {
