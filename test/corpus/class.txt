@@ -81,3 +81,52 @@ departureTime : Date
           (identifier)
           (uniqkey)
           (identifier))))))
+
+====
+style block
+====
+
+@startsalt
+<style>
+saltDiagram {
+  BackgroundColor palegreen
+}
+</style>
+{+
+  Login    | "MyName   "
+  Password | "****     "
+  [Cancel] | [  OK   ]
+}
+@endsalt
+
+---
+
+(plantuml
+  (saltuml
+    (command
+      (block
+        (block_style
+          (command
+            (identifier)
+            (block
+              (command
+                (identifier)
+                (identifier)))))))
+    (command
+      (block
+        (command
+          (uniqkey))
+        (command
+          (identifier)
+          (uniqkey)
+          (string))
+        (command
+          (identifier)
+          (uniqkey)
+          (string))
+        (command
+          (block
+            (identifier))
+          (uniqkey)
+          (block
+            (identifier)))))))
