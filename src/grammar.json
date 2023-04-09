@@ -18,6 +18,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "mindmapuml"
+        },
+        {
+          "type": "SYMBOL",
           "name": "yamluml"
         },
         {
@@ -40,11 +44,8 @@
               "type": "FIELD",
               "name": "yaml",
               "content": {
-                "type": "REPEAT",
-                "content": {
-                  "type": "SYMBOL",
-                  "name": "_commandyaml"
-                }
+                "type": "SYMBOL",
+                "name": "commandyaml"
               }
             },
             {
@@ -57,6 +58,13 @@
           "value": "@endyaml"
         }
       ]
+    },
+    "commandyaml": {
+      "type": "REPEAT1",
+      "content": {
+        "type": "SYMBOL",
+        "name": "_commandyaml"
+      }
     },
     "_commandyaml": {
       "type": "PATTERN",
@@ -122,6 +130,26 @@
         }
       ]
     },
+    "mindmapuml": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "@startmindmap"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "command"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "@endmindmap"
+        }
+      ]
+    },
     "jsonuml": {
       "type": "SEQ",
       "members": [
@@ -136,11 +164,8 @@
               "type": "FIELD",
               "name": "json",
               "content": {
-                "type": "REPEAT",
-                "content": {
-                  "type": "SYMBOL",
-                  "name": "_commandjson"
-                }
+                "type": "SYMBOL",
+                "name": "commandjson"
               }
             },
             {
@@ -153,6 +178,13 @@
           "value": "@endjson"
         }
       ]
+    },
+    "commandjson": {
+      "type": "REPEAT1",
+      "content": {
+        "type": "SYMBOL",
+        "name": "_commandjson"
+      }
     },
     "_commandjson": {
       "type": "PATTERN",

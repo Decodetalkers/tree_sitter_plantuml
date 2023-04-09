@@ -148,6 +148,16 @@
     }
   },
   {
+    "type": "commandjson",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "commandyaml",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "comment",
     "named": true,
     "fields": {}
@@ -170,7 +180,18 @@
   {
     "type": "jsonuml",
     "named": true,
-    "fields": {}
+    "fields": {
+      "json": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "commandjson",
+            "named": true
+          }
+        ]
+      }
+    }
   },
   {
     "type": "message",
@@ -207,6 +228,21 @@
     }
   },
   {
+    "type": "mindmapuml",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "plantuml",
     "named": true,
     "fields": {},
@@ -224,6 +260,10 @@
         },
         {
           "type": "jsonuml",
+          "named": true
+        },
+        {
+          "type": "mindmapuml",
           "named": true
         },
         {
@@ -275,7 +315,18 @@
   {
     "type": "yamluml",
     "named": true,
-    "fields": {}
+    "fields": {
+      "yaml": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "commandyaml",
+            "named": true
+          }
+        ]
+      }
+    }
   },
   {
     "type": "\n",
@@ -378,6 +429,10 @@
     "named": false
   },
   {
+    "type": "@endmindmap",
+    "named": false
+  },
+  {
     "type": "@endsalt",
     "named": false
   },
@@ -395,6 +450,10 @@
   },
   {
     "type": "@startjson",
+    "named": false
+  },
+  {
+    "type": "@startmindmap",
     "named": false
   },
   {
