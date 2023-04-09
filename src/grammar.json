@@ -239,6 +239,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "uniquevar"
+        },
+        {
+          "type": "SYMBOL",
           "name": "comment"
         }
       ]
@@ -317,8 +321,17 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "SYMBOL",
-              "name": "identifier"
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "uniquevar"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "identifier"
+                }
+              ]
             },
             {
               "type": "BLANK"
@@ -632,6 +645,19 @@
       "type": "STRING",
       "value": "#"
     },
+    "uniquevar": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "$"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        }
+      ]
+    },
     "identifier": {
       "type": "PATTERN",
       "value": "[a-zA-Z0-9_.\\/]+"
@@ -704,6 +730,10 @@
     [
       "block_style",
       "uniqkey"
+    ],
+    [
+      "message",
+      "uniquevar"
     ]
   ],
   "precedences": [],
