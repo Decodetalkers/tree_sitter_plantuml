@@ -13,7 +13,14 @@ module.exports = grammar({
 
   rules: {
     plantuml: ($) =>
-      choice($.baseuml, $.gannttuml, $.saltuml, $.mindmapuml, $.yamluml, $.jsonuml),
+      choice(
+        $.baseuml,
+        $.gannttuml,
+        $.saltuml,
+        $.mindmapuml,
+        $.yamluml,
+        $.jsonuml
+      ),
     ...yamluml,
     ...baseuml,
     ...jsonuml,
@@ -77,7 +84,7 @@ module.exports = grammar({
       ),
     color: ($) => seq($.colorleader, $.identifier),
     colorleader: ($) => "#",
-    identifier: ($) => /[a-zA-Z0-9]+/,
+    identifier: ($) => /[a-zA-Z0-9_]+/,
     // TODO: mutiline comment
     comment: ($) => choice($._signallinecomment, $._mutilinecomment),
     _signallinecomment: (_) => token(seq("'", /[^\n]+/g)),

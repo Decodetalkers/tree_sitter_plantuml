@@ -10,4 +10,5 @@ a : 2
 
 ---
 (plantuml
-  (yamluml))
+  (yamluml
+    (commandyaml)))
