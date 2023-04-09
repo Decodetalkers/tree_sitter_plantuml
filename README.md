@@ -1,3 +1,5 @@
-# tree-sitter-qml
+# tree-sitter-plantuml
 
-Treesitter train and test
+Almost finished
+
+release is on `gh-page` branch
