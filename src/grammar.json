@@ -294,7 +294,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "_block_1"
+          "name": "block_1"
         },
         {
           "type": "SYMBOL",
@@ -310,9 +310,21 @@
         }
       ]
     },
-    "_block_1": {
+    "block_1": {
       "type": "SEQ",
       "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "identifier"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
         {
           "type": "STRING",
           "value": "{"
@@ -617,6 +629,10 @@
     [
       "colorleader",
       "uniqkey"
+    ],
+    [
+      "block_1",
+      "_command_unit"
     ]
   ],
   "precedences": [],

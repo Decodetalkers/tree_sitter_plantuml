@@ -27,15 +27,15 @@
           "named": true
         },
         {
+          "type": "block_1",
+          "named": true
+        },
+        {
           "type": "block_style",
           "named": true
         },
         {
           "type": "color",
-          "named": true
-        },
-        {
-          "type": "command",
           "named": true
         },
         {
@@ -60,6 +60,25 @@
         },
         {
           "type": "uniqkey",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "block_1",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "identifier",
           "named": true
         }
       ]
