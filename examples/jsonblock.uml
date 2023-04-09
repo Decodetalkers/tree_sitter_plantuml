@@ -1,0 +1,25 @@
+@startjson
+{
+  "name": "tree-sitter-plantuml",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bindings/node",
+  "scripts": {
+    "lint": "prettier --check grammar.js",
+    "format": "prettier --write grammar.js",
+    "build": "tree-sitter generate",
+    "test": "tree-sitter test"
+  },
+  "keywords": [],
+  "author": "Decodetalkers",
+  "gypfile": false,
+  "license": "MIT",
+  "dependencies": {
+    "nan": "^2.16.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.6",
+    "prettier": "^2.7.1"
+  }
+}
+@endjson

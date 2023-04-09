@@ -13,7 +13,7 @@ module.exports = grammar({
 
   rules: {
     plantuml: ($) =>
-      choice($.baseuml, $.gannttuml, $.saltuml, $.yamluml, $.jsonuml),
+      choice($.baseuml, $.gannttuml, $.saltuml, $.mindmapuml, $.yamluml, $.jsonuml),
     ...yamluml,
     ...baseuml,
     ...jsonuml,

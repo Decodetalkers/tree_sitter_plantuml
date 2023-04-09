@@ -16,5 +16,11 @@ module.exports = {
       "@startgantt",
       repeat($.command),
       "@endgantt"
+    ),
+  mindmapuml: $ =>
+    seq(
+      "@startmindmap",
+      repeat($.command),
+      "@endmindmap"
     )
 };

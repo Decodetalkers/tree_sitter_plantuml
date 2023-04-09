@@ -2,8 +2,9 @@ module.exports = {
   jsonuml: ($) =>
     seq(
       "@startjson",
-      optional(field("json", repeat($._commandjson))),
+      optional(field("json", $.commandjson)),
       "@endjson",
     ),
+  commandjson: $ => repeat1($._commandjson),
   _commandjson: $ => /[^\n]+/g
 };

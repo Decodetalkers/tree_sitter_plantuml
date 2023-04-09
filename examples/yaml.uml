@@ -1,0 +1,90 @@
+@startyaml
+#env:  
+#    # TERM variable
+#    #
+#    # This value is used to set the `$TERM` environment variable for
+#    # each instance of Alacritty. If it is not present, alacritty will
+#    # check the local terminfo database and use `alacritty` if it is
+#    # available, otherwise `xterm-256color` is used.
+#    TERM: alacritty
+
+tabspaces: 4
+window:
+  opacity: 1 
+
+font:
+    normal:
+    # family: Hack
+    # family: "Sarasa Mono SC"
+        family: "Hack Nerd Font Mono"  #目前的版本不支持连字
+        style: Regular
+
+    bold:
+        family: "Hack Nerd Font Mono" 
+        style: Bold
+
+    italic:
+        family: "Hack Nerd Font Mono"
+        style: Italic
+
+    bold_italic:
+        family: "Hack Nerd Font Mono"
+        style: Bold Italic
+    
+    size : 15
+        #family: Hack
+
+colors:
+  # Default colors
+  primary:
+    background: '#1b1e27'
+    foreground: '#EBEBEB'
+
+  # Cursor colors
+  cursor:
+    text: '#FFFFFF'
+    cursor: '#FFFFFF'
+
+  # Normal colors
+  normal:
+    black:   '#0d0d0d'
+    red:     '#FF301B'
+    green:   '#00CD00'
+    yellow:  '#FFC620'
+    blue:    '#1BA6FA'
+    magenta: '#8763B8'
+    cyan:    '#21DEEF'
+    white:   '#FFFFFF'
+
+  # Bright colors
+  bright:
+    black:   '#6D7070'
+    red:     '#FF4352'
+    green:   '#00CD00'
+    yellow:  '#FFD750'
+    blue:    '#1BA6FA'
+    magenta: '#A578EA'
+    cyan:    '#73FBF1'
+    white:   '#FFFFFF'
+
+key_bindings:
+    # (Windows, Linux, and BSD only)
+  - { key: V,         mods: Control|Shift, action: PasteSelection              }
+  - { key: M,         mods: Control,       action: Paste                       }
+  - { key: C,         mods: Control|Shift, action: Copy                        }
+  - { key: Insert,    mods: Shift,         action: PasteSelection              }
+  - { key: Key0,      mods: Control,       action: ResetFontSize               }
+  - { key: Equals,    mods: Control,       action: IncreaseFontSize            }
+  - { key: Plus,      mods: Control,       action: IncreaseFontSize            }
+  - { key: Minus,     mods: Control,       action: DecreaseFontSize            }
+  - { key: F11,       mods: Control,       action: ToggleFullscreen            }
+  - { key: Paste,     mods: None,          action: Paste                       }
+  - { key: Copy,      mods: None,          action: Copy                        }
+  - { key: L,         mods: Control,       action: ClearLogNotice              }
+  - { key: L,         mods: Control,       chars: "\x0c"                       }
+    #- { key: PageUp,    mods: None,          action: ScrollPageUp,   mode: ~Alt  }
+    #- { key: PageDown,  mods: None,          action: ScrollPageDown, mode: ~Alt  }
+  - { key: Home,      mods: Shift,         action: ScrollToTop,    mode: ~Alt  }
+  - { key: End,       mods: Shift,         action: ScrollToBottom, mode: ~Alt  }
+
+@endyaml

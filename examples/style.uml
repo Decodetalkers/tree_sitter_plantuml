@@ -11,11 +11,10 @@ skinparam useBetaStyle true
       }
 
      ' define a new style, using CSS class syntax
-     .myStyle {
+      .myStyle {
         FontColor Red
-     }
-
-}
+      }
+    }
 </style>
 
 ' printed in blue
