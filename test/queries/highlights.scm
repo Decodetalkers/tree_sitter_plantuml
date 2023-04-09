@@ -7,6 +7,7 @@
  "@endjson"
  "@endyaml"
  "@endmindmap"
+ "$"
 ] @keyword
 
 (uniqkey) @keyword
@@ -20,6 +21,10 @@
 		"actor"
 		"class"
 	)
+)
+
+(uniquevar
+  (identifier) @type.definition
 )
 
 ((identifier) @boolean
