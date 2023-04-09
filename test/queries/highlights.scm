@@ -29,6 +29,11 @@
 	)
 )
 
+(block_style
+  head: (identifier) @type.definition
+  end: (identifier) @type.definition
+)
+
 [
   "("
   ")"
@@ -36,6 +41,8 @@
   "}"
   "["
   "]"
+  "<"
+  ">"
 ] @punctuation.bracket
 
 (block_1

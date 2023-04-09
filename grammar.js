@@ -10,6 +10,8 @@ module.exports = grammar({
     [$.colorleader, $.uniqkey],
     // NOTE: * is uniqkey, also string mark
     [$.block_1, $._command_unit],
+    // NOTE: style block is conflicts with uniqkey, also use "<" and ">" and "/"
+    [$.block_style, $.uniqkey],
   ],
 
   rules: {
@@ -43,7 +45,13 @@ module.exports = grammar({
     block_1: ($) => seq(optional($.identifier), "{", repeat($.command), "}"),
     _block_2: ($) => seq("[", repeat($._command_unit), "]"),
     _block_3: ($) => seq("(", repeat($._command_unit), ")"),
-    block_style: ($) => seq("<style>", repeat($.command), "</style>"),
+    block_style: ($) =>
+      seq(
+        "<",
+        field("head", seq($.identifier, optional(seq(":", $.identifier)), ">")),
+        choice(repeat($.command), repeat($._command_unit)),
+        field("end", seq("</", $.identifier, ">"))
+      ),
     uniqkey: ($) =>
       choice(
         ".",
@@ -85,7 +93,7 @@ module.exports = grammar({
       ),
     color: ($) => seq($.colorleader, $.identifier),
     colorleader: ($) => "#",
-    identifier: ($) => /[a-zA-Z0-9_]+/,
+    identifier: ($) => /[a-zA-Z0-9_.\/]+/,
     // TODO: mutiline comment
     comment: ($) => choice($._signallinecomment, $._mutilinecomment),
     _signallinecomment: (_) => token(seq("'", /[^\n]+/g)),

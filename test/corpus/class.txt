@@ -108,13 +108,15 @@ saltDiagram {
     (command
       (block
         (block_style
+          (identifier)
           (command
             (block
               (block_1
                 (identifier)
                 (command
                   (identifier)
-                  (identifier))))))))
+                  (identifier)))))
+          (identifier))))
     (command
       (block
         (block_1
