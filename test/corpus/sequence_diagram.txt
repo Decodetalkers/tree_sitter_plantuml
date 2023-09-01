@@ -1,0 +1,424 @@
+================================================================================
+Basic examples
+================================================================================
+
+@startuml
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: Another authentication Response
+@enduml
+
+---
+
+(plantuml
+  (baseuml
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier)
+      (identifier))))
+
+================================================================================
+- Basic examples - 1
+================================================================================
+
+@startuml
+Alice -> Bob: Authentication Request
+Bob --> Alice
+
+Alice -> Bob: Another authentication Request
+Alice <-- Bob:
+@enduml
+
+--------------------------------------------------------------------------------
+
+(plantuml
+  (baseuml
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (uniqkey)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey))))
+
+
+================================================================================
+Declaring participant
+================================================================================
+
+@startuml
+participant participant as Foo
+actor       actor       as Foo1
+boundary    boundary    as Foo2
+control     control     as Foo3
+entity      entity      as Foo4
+database    database    as Foo5
+collections collections as Foo6
+queue       queue       as Foo7
+Foo -> Foo1 : To actor
+Foo -> Foo2 : To boundary
+Foo -> Foo3 : To control
+Foo -> Foo4 : To entity
+Foo -> Foo5 : To database
+Foo -> Foo6 : To collections
+Foo -> Foo7: To queue
+@enduml
+
+--------------------------------------------------------------------------------
+
+(plantuml
+  (baseuml
+    (command
+      (identifier)
+      (identifier)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (identifier)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (identifier)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (identifier)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (identifier)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (identifier)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (identifier)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (identifier)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier))))
+
+================================================================================
+- Declaring participant - 1
+================================================================================
+
+@startuml
+participant participant as Foo
+
+actor       actor       as Foo1
+Foo -> Foo1 : To actor
+
+boundary    boundary    as Foo2
+Foo -> Foo2 : To boundary
+
+control     control     as Foo3
+Foo -> Foo3 : To control
+
+entity      entity      as Foo4
+Foo -> Foo4 : To entity
+
+database    database    as Foo5
+Foo -> Foo5 : To database
+
+collections collections as Foo6
+Foo -> Foo6 : To collections
+
+queue       queue       as Foo7
+Foo -> Foo7: To queue
+@enduml
+
+--------------------------------------------------------------------------------
+(plantuml
+  (baseuml
+    (command
+      (identifier)
+      (identifier)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (identifier)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (identifier)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (identifier)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (identifier)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (identifier)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (identifier)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (identifier)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier))))
+
+
+================================================================================
+Divider or separator
+================================================================================
+
+@startuml
+
+== Initialization ==
+
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+
+== Repetition ==
+
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: another authentication Response
+
+@enduml
+
+--------------------------------------------------------------------------------
+
+(plantuml
+  (baseuml
+    (command
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (uniqkey))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier))
+    (command
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (uniqkey))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier)
+      (identifier))
+    (command
+      (identifier)
+      (uniqkey)
+      (uniqkey)
+      (uniqkey)
+      (identifier)
+      (uniqkey)
+      (identifier)
+      (identifier)
+      (identifier))))
